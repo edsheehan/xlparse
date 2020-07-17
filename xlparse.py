@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import re
 
-outs = np.array([])
+out = np.array([])
 
 xlsx = pd.ExcelFile('D:/Users/Ed Sheehan/Documents/Backups.xlsx')
 df = pd.read_excel(xlsx, 'Sheet1')
@@ -13,8 +13,7 @@ for item in all:
     split = re.split(r'[\,\-\+](?<!APP-)', item)
     for app in split:
         print(app)
-        outs = np.append(outs, app)
+        out = np.append(out, app)
 
-
-print(outs)
-print(np.unique(outs))
+print(out)
+print(np.unique(out))
