@@ -17,3 +17,9 @@ for item in all:
 
 print(out)
 print(np.unique(out))
+
+results = pd.DataFrame(np.unique(out))
+results.columns = ['App_ID']
+print(results)
+
+results.to_excel('D:/Users/Ed Sheehan/Documents/Output.xlsx', index=False)
